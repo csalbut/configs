@@ -20,14 +20,14 @@ set shiftwidth=4
 set softtabstop=4
 "set expandtab		" Convert tabs to spaces.
 
-" set number
+set hidden
+
+set number
 set showbreak=------>\  " line up soft-wrap prefix with the line numbers
 " set cpoptions+=n        " start soft-wrap lines (and any prefix) in the line-number area
 
 " Paragraph formatting program
 " set formatprg=par\ -w85
-
-" behave mswin
 
 set nobackup
 set noswapfile
@@ -37,8 +37,6 @@ set noswapfile
 if has("autocmd")
     if !exists("autocommands_loaded")
         let autocommands_loaded = 1
-"        autocmd bufwrite *.tex call CmdLine("call latex#SierotkiUsun()")
-        autocmd bufwrite *.tex call latex#SierotkiUsun()
         autocmd bufwritepost _vimrc source $MYVIMRC
     endif
 endif
